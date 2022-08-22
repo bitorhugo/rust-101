@@ -9,4 +9,8 @@ fn main() {
     println!("Value of z : {z}");
     // we can also access tuple element via '.'
     println!("Value of second element of b : {}", _b.1);
+
+    // arrays 
+    let _a = [1, 2, 4];
+    println!(" Array element 0 -> {}", _a[0]);
 }
