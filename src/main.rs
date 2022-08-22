@@ -1,31 +1,12 @@
-use std::io;
-use std::cmp::Ordering;
-use rand::Rng; // random number generator
 
 fn main() {
-    println! ("Guess the number");
-    loop {
-        let secret = rand::thread_rng().gen_range(0..=100);
-        println! ("Input a number");
-
-        let mut guess = String::new();
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("expecting guess input");
-        let guess : u8 = match guess.trim().parse() {
-            Ok(num) => num,
-            Err(_) => continue,
-        }; 
-
-        match guess.cmp(&secret) {
-            Ordering::Less => println!("Guess is lower than secret"),
-            Ordering::Equal => {
-                println!("Correct!");
-                break;
-            }
-            Ordering::Greater => println!("Guess is higher than secret"),
-        }
-        println!("secret = {}", secret);
-    }
-
+    // tuples
+    let _a = (1, 2, 3);
+    // tuple with type annotation
+    let _b : (u8, char, bool) = (1, 'T', false);
+    // pattern match with let
+    let (_x, _y, z) = _b; // x, y and z are single values
+    println!("Value of z : {z}");
+    // we can also access tuple element via '.'
+    println!("Value of second element of b : {}", _b.1);
 }

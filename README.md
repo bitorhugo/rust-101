@@ -6,7 +6,7 @@ Learning rust from the very beginning
 
 # List of things learned
 -> Cargo (buid, run, check): Build tool and package/dependency manager
-	Toml file (Tom's Obvious mini language): Configuration file
+	Toml file (Tom's Obvious mini language): Configuration file. also called a manifest
 
 -> Rust has an in-built library called Prelude (std::prelude) : https://doc.rust-lang.org/std/prelude/index.html
 	If a type or function isn't on the std::prelude we can import it by typing the 'use' statement
@@ -42,3 +42,17 @@ Learning rust from the very beginning
 -> Enumerations like Result can be matched to handle errors
 	eg: match { ok() => , Err(_) => ,}
 	We can either let .except() handle the error, or match the result against a possible Ok() or Err()
+
+-> We cannot add two diferent types od data
+	e.g. integer + floating-point numbers
+	Rust has scalar and compound data types
+	scalar: Represent a single value:  integers, floating-point numbers, booleans and characters
+	Char type is 4 bytes long and represents an unicode Scalar data type
+	compound: Represent data types that can hold multiple values: tuples and arrays
+
+-> Any expression that doesn't hold any value or return any value is called an unit ' () '
+
+-> Arrays are another compund data type available in rust
+	They are fixed size and every element needs to hava the same type
+
+
