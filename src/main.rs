@@ -19,7 +19,7 @@ fn main() {
 
     let mut index : usize;
 
-    loop {
+    let _l = loop {
         println!("Enter a number");
         let mut input = String::new();
         io::stdin()
@@ -29,11 +29,17 @@ fn main() {
         index = input.trim().parse().expect("number");
 
         if index < a.len() {
-            break;
+            break
         }
         println!("Out of bounds value");
-    }
+    };
 
    println!("Element with index {} -> {}", index, a[index]);
-    
+
+    // returning loop values using break
+   let a = 5; 
+   let lop = loop {
+       break a;
+   };
+   println!("{lop}");
 }

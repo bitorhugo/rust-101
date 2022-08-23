@@ -62,3 +62,6 @@ Learning rust from the very beginning
 	Statements don't evaluate to a value; e.g. let a = 5;
 	Expression do evaluate (return) to a value; e.g. let a = 5 + 5;
 	
+-> We can return what a 'loop' evaluates to using break keyword
+	e.g. let l = loop { break 5 };
+	break can either return a value, or unit '()' if used alone e.g. break;
