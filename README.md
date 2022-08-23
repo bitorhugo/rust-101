@@ -58,3 +58,7 @@ Learning rust from the very beginning
 
 -> Both tuples and arrays are stack allocated !
 
+-> Rust is is an expression based language where there's a distinction between statements and expressions
+	Statements don't evaluate to a value; e.g. let a = 5;
+	Expression do evaluate (return) to a value; e.g. let a = 5 + 5;
+	
