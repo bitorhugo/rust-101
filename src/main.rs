@@ -1,3 +1,4 @@
+use std::io;
 
 fn main() {
     // tuples
@@ -12,5 +13,27 @@ fn main() {
 
     // arrays 
     let _a = [1, 2, 4];
-    println!(" Array element 0 -> {}", _a[0]);
+    let _a = [1; 5]; // array with the element 1 repeated 5x
+    let a : [usize; 5] = [0, 1, 2, 3, 4]; // array with size 5 of i32
+    println!(" Array element 0 -> {}", a[0]);
+
+    let mut index : usize;
+
+    loop {
+        println!("Enter a number");
+        let mut input = String::new();
+        io::stdin()
+            .read_line(&mut input) // explicity say &mut otherwise we won't be able to modify the value
+            .expect("Failed to read line"); 
+
+        index = input.trim().parse().expect("number");
+
+        if index < a.len() {
+            break;
+        }
+        println!("Out of bounds value");
+    }
+
+   println!("Element with index {} -> {}", index, a[index]);
+    
 }

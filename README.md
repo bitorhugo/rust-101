@@ -54,6 +54,7 @@ Learning rust from the very beginning
 
 -> Arrays are another compund data type available in rust
 	They are fixed size and every element needs to hava the same type
+	Syntax : arr = [1, 2, 3] || arr : [type; size] = [1, 2, ...] || arr = [1; size]
 
 -> Both tuples and arrays are stack allocated !
 
