@@ -65,3 +65,10 @@ Learning rust from the very beginning
 -> We can return what a 'loop' evaluates to using break keyword
 	e.g. let l = loop { break 5 };
 	break can either return a value, or unit '()' if used alone e.g. break;
+
+-> Ownership is a set of rules that dictate how memory is handled in Rust
+	Each value in Rust has an owner
+	A value can only have one owner at a time
+	When the value goes out of scope, it is dropped (freed)
+	Let's say we declare a var in main, once that variable is passed onto a function we cannot use it after that
+	e.g. fn main {let s = String::new(); another_function(s);}
