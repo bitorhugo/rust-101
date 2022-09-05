@@ -1,5 +1,24 @@
 use std::io;
 
+struct User {
+    active: bool,
+    email: String,
+    username: String,
+    sign_in_count: usize,
+}
+
+// named tuple
+struct Color (i16, i16, i16);
+
+fn build_user (username: String, email: String) -> User {
+    return User {
+        email, 
+        username,
+        active = true,
+        sign_in_count = 1,
+    };
+}
+
 fn main() {
     // tuples
     let _a = (1, 2, 3);
@@ -44,4 +63,12 @@ fn main() {
    println!("{lop}");
 
    let mut s = "hello";
+
+   let mut user1 = build_user("hugo", "email");
+   println("{}", user1.email);
+   let user2 = User {
+       email: String::from("bruno"),
+       ..user1
+   };
+   println!("{}", user2.email);
 }

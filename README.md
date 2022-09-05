@@ -72,3 +72,7 @@ Learning rust from the very beginning
 	When the value goes out of scope, it is dropped (freed)
 	Let's say we declare a var in main, once that variable is passed onto a function we cannot use it after that
 	e.g. fn main {let s = String::new(); another_function(s);}
+
+-> Structs are used to group data that coorelate to each other
+	There are named tuples aswell, e.g: Color (i16, i16, i16);
+	In order to print structs the #[derive(Debug)] attribute is necessary
