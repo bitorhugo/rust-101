@@ -6,6 +6,18 @@ struct User {
     sign_in_count: usize,
 }
 
+#[derive(Debug)]
+struct Rectangle {
+    height: i32,
+    width: i32,
+}
+
+impl Rectangle {
+    fn area(&self) -> i32 {
+        return self.height * self.width;
+    }
+}
+
 fn build_user (username: String, email: String) -> User {
     return User {
         email, 
@@ -38,5 +50,9 @@ fn main () {
    user.email = String::from("new email");
    println!("{}", user.email);
    println!("{:?}", user);
+   
+   let rect = Rectangle { height: 2, width: 4 };
+   println!("{:?}", rect);
+   println!("{}", rect.area());
 }
 

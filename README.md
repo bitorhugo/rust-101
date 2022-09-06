@@ -76,3 +76,8 @@ Learning rust from the very beginning
 -> Structs are used to group data that coorelate to each other
 	There are named tuples aswell, e.g: Color (i16, i16, i16);
 	In order to print structs the #[derive(Debug)] attribute is necessary
+
+-> Methods and functions are very similar regarding their functionality but differ in the way they are implemented
+	Unlike functions, mehtods are written inside the context of a Struct on a impl block
+	e.g: impl Rectangle {...}
+	The dot notation is used to select methods
