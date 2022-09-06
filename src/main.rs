@@ -33,6 +33,7 @@ fn take_ownership (some_string : String) {
 fn take_scalar (_num : isize) {
 }
 
+#[warn(unused_variables)]
 fn main () {
    let s = String::from("Hello World"); 
    // move s into take_ownership func
@@ -54,5 +55,12 @@ fn main () {
    let rect = Rectangle { height: 2, width: 4 };
    println!("{:?}", rect);
    println!("{}", rect.area());
+
+   let n : Option<char> = None;
+   let mut op = Some (12);
+   let a : u8 = 5;
+   let b : f32 = 2.2;
+   println!("{:?}", op.unwrap());
+   
 }
 
