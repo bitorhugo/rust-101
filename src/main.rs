@@ -60,7 +60,7 @@ fn main () {
    let mut op = Some (12);
    let a : u8 = 5;
    let b : f32 = 2.2;
-   println!("{:?}", op.unwrap());
+   println!("{}", op.unwrap());
    
 }
 
